@@ -1,10 +1,15 @@
 /* Importing Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-/* Custom Font from Local File */
+/* Custom Fonts from Local Files */
 @font-face {
     font-family: 'LowerResolution';
     src: url('LowerResolution.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Linebeam';
+    src: url('Linebeam.tff') format('truetype');
 }
 
 body {
@@ -44,6 +49,7 @@ body {
 h2 {
     font-size: 2rem;
     margin-top: 20px;
+    font-family: 'Linebeam', sans-serif;
 }
 
 ul {
