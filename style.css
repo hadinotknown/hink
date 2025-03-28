@@ -1,22 +1,34 @@
+/* Importing Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Custom Font from Local File */
+@font-face {
+    font-family: 'LowerResolution';
+    src: url('LowerResolution.ttf') format('truetype');
+}
+
 body {
-    background-color: white;
-    font-family: Arial, sans-serif;
+    font-family: 'LowerResolution', sans-serif;
+    background-color: #f4f4f4;
+    color: #111;
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 .banner {
     overflow: hidden;
     white-space: nowrap;
     background: black;
-    padding: 10px 0;
+    padding: 40px 0;
 }
 
 .marquee {
     display: inline-block;
-    font-size: 3rem;
+    font-size: 6rem;
     font-weight: bold;
     color: white;
-    animation: marquee 10s linear infinite;
+    animation: marquee 13.3s linear infinite; /* 50% faster */
 }
 
 @keyframes marquee {
@@ -25,13 +37,12 @@ body {
 }
 
 .container {
-    max-width: 600px;
-    margin: 20px auto;
+    padding: 20px;
 }
 
 h2 {
-    border-bottom: 1px solid black;
-    display: inline-block;
+    font-size: 2rem;
+    margin-top: 20px;
 }
 
 ul {
@@ -44,19 +55,8 @@ ul li {
     margin: 0 10px;
 }
 
-a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-}
-
 .gallery img {
-    width: 100px;
+    width: 200px;
     margin: 10px;
     cursor: pointer;
-    border: 1px solid black;
-}
-
-.gallery img:hover {
-    transform: scale(1.2);
 }
