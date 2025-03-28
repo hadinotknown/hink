@@ -1,19 +1,14 @@
 /* Importing Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-/* Custom Fonts from Local Files */
-@font-face {
-    font-family: 'LowerResolution';
-    src: url('LowerResolution.ttf') format('truetype');
-}
-
+/* Custom Font from Local Files */
 @font-face {
     font-family: 'Linebeam';
     src: url('Linebeam.tff') format('truetype');
 }
 
 body {
-    font-family: 'LowerResolution', sans-serif;
+    font-family: 'Linebeam', sans-serif;
     background-color: #f4f4f4;
     color: #111;
     text-align: center;
@@ -26,6 +21,7 @@ body {
     white-space: nowrap;
     background: black;
     padding: 40px 0;
+    font-family: 'sans-serif'; /* Sans-serif for the banner */
 }
 
 .marquee {
@@ -33,7 +29,7 @@ body {
     font-size: 6rem;
     font-weight: bold;
     color: white;
-    font-family: 'Press Start 2P', sans-serif; /* Restoring previous font */
+    font-family: 'sans-serif'; /* Sans-serif for the banner text */
     animation: marquee 13.3s linear infinite; /* 50% faster */
 }
 
@@ -49,7 +45,7 @@ body {
 h2 {
     font-size: 2rem;
     margin-top: 20px;
-    font-family: 'Linebeam', sans-serif;
+    font-family: 'Linebeam', sans-serif; /* Linebeam for other text */
 }
 
 ul {
