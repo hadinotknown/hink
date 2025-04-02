@@ -4,73 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HINK</title>
-    <link rel="stylesheet" href="style.css">
     <style>
-    body {
-        font-family: AlteHaasGrotesk, sans-serif;
-        margin: 0;
-        background-color: #f4f4f4;
-    }
+        body {
+            font-family: AlteHaasGrotesk, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
 
-    .banner {
-        overflow: hidden;
-        white-space: nowrap;
-        background: black;
-        padding: 40px 0;
-        text-align: center;
-    }
+        .banner {
+            overflow: hidden;
+            white-space: nowrap;
+            background: black;
+            padding: 40px 0;
+            text-align: center;
+        }
 
-    .marquee {
-        display: inline-block;
-        font-size: 6rem;
-        font-weight: bold;
-        color: white;
-        animation: marquee 5s linear infinite;
-        position: relative;
-    }
+        .marquee {
+            display: inline-block;
+            font-size: 6rem;
+            font-weight: bold;
+            color: white;
+            position: relative;
+        }
 
-    @keyframes marquee {
-        0% { transform: translateX(calc(100% + 25vw)); }
-        100% { transform: translateX(calc(-100% - 25vw)); }
-    }
+        .letter {
+            display: inline-block;
+            opacity: 0; /* Start hidden */
+            transform: translateX(100vw); /* Start off-screen to the right */
+            transition: opacity 0.5s ease, transform 0.5s ease; /* Transition for animation */
+        }
 
-    h2 {
-        color: #333;
-        margin-top: 20px;
-    }
+        h2 {
+            color: #333;
+            margin-top: 20px;
+        }
 
-    .gallery img {
-        width: 100%;
-        max-width: 400px; 
-        margin: 10px;
-        border-radius: 4px;
-    }
+        .nav-bar {
+            background-color: #f8f8f8;
+            padding: 10px;
+            text-align: center;
+        }
 
-    .nav-bar {
-        background-color: #f8f8f8;
-        padding: 10px;
-        text-align: center;
-    }
+        .nav-bar a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
 
-    .nav-bar a {
-        margin: 0 15px;
-        text-decoration: none;
-        color: #333;
-        font-weight: bold;
-        font-size: 1.2rem;
-    }
+        .nav-bar a:hover {
+            text-decoration: underline;
+            color: #007BFF; /* Change color on hover */
+        }
 
-    .nav-bar a:hover {
-        text-decoration: underline;
-        color: #007BFF; /* Change color on hover */
-    }
-
-    .container {
-        text-align: center; /* Center the text */
-        padding: 20px; /* Add some padding */
-    }
-</style>
- <script>
+        .container {
+            text-align: center; /* Center the text */
+            padding: 20px; /* Add some padding */
+        }
+    </style>
+    <script>
         const marqueeText = "HINK"; // The text to animate
         const marqueeContainer = document.querySelector('.marquee');
 
@@ -79,17 +72,15 @@
             marqueeContainer.innerHTML = ''; // Clear existing content
             for (let letter of marqueeText) {
                 const span = document.createElement('span');
+                span.className = 'letter'; // Add class for styling
                 span.textContent = letter;
-                span.style.display = 'inline-block'; // Ensure letters are inline
-                span.style.opacity = 0; // Start with letters hidden
-                span.style.transform = 'translateX(100vw)'; // Start off-screen to the right
                 marqueeContainer.appendChild(span);
             }
         }
 
         // Function to animate letters
         function animateLetters() {
-            const letters = marqueeContainer.querySelectorAll('span');
+            const letters = marqueeContainer.querySelectorAll('.letter');
             let delay = 0;
 
             letters.forEach((letter, index) => {
@@ -97,7 +88,6 @@
                 setTimeout(() => {
                     letter.style.opacity = 1; // Fade in the letter
                     letter.style.transform = `translateX(0)`; // Move to the center
-                    letter.style.transition = 'opacity 0.5s ease, transform 0.5s ease'; // Transition effect
                 }, delay);
                 delay += 500; // Increase delay for the next letter
             });
@@ -123,7 +113,7 @@
 </head>
 <body>
     <header class="banner">
-        <div class="marquee">HINK</div>
+        <div class="marquee"></div>
     </header>
     
     <nav class="nav-bar">
