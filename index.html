@@ -5,6 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HINK</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: AlteHaasGrotesk, sans-serif; /* Set a default font for the body */
+            margin: 0; /* Remove default margin */
+            background-color: #f4f4f4; /* Light background for better contrast */
+        }
+
+        /* Banner Styles */
+        .banner {
+            overflow: hidden;
+            white-space: nowrap;
+            background: black;
+            padding: 40px 0;
+        }
+
+        .marquee {
+            display: inline-block;
+            font-size: 6rem;
+            font-weight: bold;
+            color: white;
+            animation: marquee 5s linear infinite; /* Animation for scrolling text */
+            position: relative; /* Position relative for the chomping effect */
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(100%); clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); } /* Start off-screen to the right */
+            100% { transform: translateX(-100%); clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); } /* Move to off-screen to the left */
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 20px; /* Add space above headings */
+        }
+
+        /* Gallery Styles */
+        .gallery img {
+            width: 100%; /* Responsive images */
+            max-width: 300px; /* Limit max width */
+            margin: 10px;
+            border-radius: 4px; /* Rounded corners for images */
+        }
+
+        /* Navigation Bar Styles */
+        .nav-bar {
+            background-color: #f8f8f8;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .nav-bar a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 1.2rem; /* Increased font size for visibility */
+        }
+
+        .nav-bar a:hover {
+            text-decoration: underline;
+            color: #007BFF; /* Change color on hover */
+        }
+    </style>
 </head>
 <body>
     <header class="banner">
@@ -20,7 +83,7 @@
 
     <main class="container">
         <h2>Upcoming Shows</h2>
-        <p>04/05 @ The Valley</p>
+        <p>04/05 @ The Valley</p> <!-- Paragraph set to "04/05 @ The Valley" -->
 
         <h2>Next Release</h2>
         <p id="news">["Restart/All You Can Do is Laugh" + "Had I Not Known I Was Already Dead I Would Mourn My Loss of Life"]</p>
@@ -31,8 +94,5 @@
             <li><a href="#">Apple Music</a></li>
             <li><a href="#">Bandcamp</a></li>
         </ul>
-    </main>
 
-    <script src="script.js"></script>
-</body>
-</html>
+        <h2>
