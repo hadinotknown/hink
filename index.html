@@ -6,14 +6,12 @@
     <title>HINK</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* General Styles */
         body {
-            font-family: AlteHaasGrotesk, sans-serif; /* Set a default font for the body */
-            margin: 0; /* Remove default margin */
-            background-color: #f4f4f4; /* Light background for better contrast */
+            font-family: AlteHaasGrotesk, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
         }
 
-        /* Banner Styles */
         .banner {
             overflow: hidden;
             white-space: nowrap;
@@ -26,29 +24,27 @@
             font-size: 6rem;
             font-weight: bold;
             color: white;
-            animation: marquee 2s linear infinite; /* Animation for scrolling text */
+            animation: marquee 2s linear infinite;
             position: relative;
         }
 
         @keyframes marquee {
-            -100% { transform: translateX(100%); } /* Start off-screen to the right */
-            100% { transform: translateX(-100%); } /* Move to off-screen to the left */
+            -100% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
         }
 
         h2 {
             color: #333;
-            margin-top: 20px; /* Add space above headings */
+            margin-top: 20px;
         }
 
-        /* Gallery Styles */
         .gallery img {
-            width: 100%; /* Responsive images */
-            max-width: 400px; /* Limit max width */
+            width: 100%;
+            max-width: 400px; 
             margin: 10px;
-            border-radius: 4px; /* Rounded corners for images */
+            border-radius: 4px;
         }
 
-        /* Navigation Bar Styles */
         .nav-bar {
             background-color: #f8f8f8;
             padding: 20px;
@@ -60,7 +56,7 @@
             text-decoration: none;
             color: #333;
             font-weight: bold;
-            font-size: 1.2rem; /* Increased font size for visibility */
+            font-size: 1.2rem;
         }
 
         .nav-bar a:hover {
@@ -83,7 +79,7 @@
 
     <main class="container">
         <h2>Upcoming Shows</h2>
-        <p>04/05 @ The Valley</p> <!-- Paragraph set to "04/05 @ The Valley" -->
+        <p>04/05 @ The Valley</p>
 
         <h2>Next Release</h2>
         <p id="news">Restart/All You Can Do is Laugh + Had I Not Known I Was Already Dead I Would Mourn My Loss of Life</p>
@@ -94,5 +90,3 @@
             <li><a href="#">Apple Music</a></li>
             <li><a href="#">Bandcamp</a></li>
         </ul>
-
-        <h2>
