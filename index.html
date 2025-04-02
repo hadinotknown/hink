@@ -27,11 +27,13 @@
             font-weight: bold;
             color: white;
             animation: marquee 5s linear infinite; /* Animation for scrolling text */
+            position: relative; /* Position relative for the chomping effect */
         }
 
         @keyframes marquee {
-            0% { transform: translateX(100%); } /* Start off-screen to the right */
-            100% { transform: translateX(-100%); } /* Move to off-screen to the left */
+            0% { transform: translateX(100%); clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); } /* Start off-screen to the right */
+            50% { clip-path: polygon(0 0, 80% 50%, 0 100%, 0 0); } /* Chomp effect */
+            100% { transform: translateX(-100%); clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); } /* Move to off-screen to the left */
         }
 
         /* Container Styles */
@@ -104,13 +106,4 @@
             <li><a href="#">Bandcamp</a></li>
         </ul>
 
-        <h2>Lyrics</h2>
-        <div class="gallery">
-            <img src="lyrics1.jpg" alt="Lyrics Page 1">
-            <img src="lyrics2.jpg" alt="Lyrics Page 2">
-        </div>
-    </main>
-
-    <script src="script.js"></script>
-</body>
-</html>
+        <h2>
