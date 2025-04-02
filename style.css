@@ -6,3 +6,7 @@
     font-weight: normal; /* Adjust if using bold */
     font-style: normal;
 }
+.container {
+    text-align: center; /* Center the text */
+    padding: 20px; /* Add some padding */
+}
