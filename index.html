@@ -9,7 +9,7 @@ Open menu
     <style>
         /* General Styles */
         body {
-            font-family: Arial, sans-serif; /* Set a default font for the body */
+            font-family: AlteHaasGrotesk, sans-serif; /* Set a default font for the body */
             margin: 0; /* Remove default margin */
             background-color: #f4f4f4; /* Light background for better contrast */
         }
@@ -27,13 +27,12 @@ Open menu
             font-size: 6rem;
             font-weight: bold;
             color: white;
-            animation: marquee 5s linear infinite; /* Animation for scrolling text */
+            animation: marquee 1s linear infinite; /* Animation for scrolling text */
             position: relative; /* Position relative for the chomping effect */
         }
 
         @keyframes marquee {
             0% { transform: translateX(100%); clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); } /* Start off-screen to the right */
-            50% { clip-path: polygon(0 0, 80% 50%, 0 100%, 0 0); } /* Chomp effect */
             100% { transform: translateX(-100%); clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); } /* Move to off-screen to the left */
         }
 
