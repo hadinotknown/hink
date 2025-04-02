@@ -23,7 +23,7 @@
         }
 
         @keyframes marquee {
-            0% { transform: translateX(100%); } /* Start off-screen to the right */
+            -100% { transform: translateX(100%); } /* Start off-screen to the right */
             100% { transform: translateX(-100%); } /* Move to off-screen to the left */
         }
 
@@ -78,7 +78,7 @@
 
     <main class="container">
         <h2 id="shows">Upcoming Shows</h2>
-        <p><strong>04/05 @ The Valley</strong></p> <!-- Updated to bold text -->
+        <p>04/05 @ The Valley</p>
 
         <h2>Next Release</h2>
         <p id="news">["Restart/All You Can Do is Laugh" + "Had I Not Known I Was Already Dead I Would Mourn My Loss of Life"]</p>
