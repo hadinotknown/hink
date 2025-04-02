@@ -6,64 +6,70 @@
     <title>HINK</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        body {
-            font-family: AlteHaasGrotesk, sans-serif;
-            margin: 0;
-            background-color: #f4f4f4;
-        }
+    body {
+        font-family: AlteHaasGrotesk, sans-serif;
+        margin: 0;
+        background-color: #f4f4f4;
+    }
 
-        .banner {
-            overflow: hidden;
-            white-space: nowrap;
-            background: black;
-            padding: 40px 0;
-        }
+    .banner {
+        overflow: hidden;
+        white-space: nowrap;
+        background: black;
+        padding: 40px 0;
+    }
 
-        .marquee {
-            display: inline-block;
-            font-size: 6rem;
-            font-weight: bold;
-            color: white;
-            animation: marquee 2s linear infinite;
-            position: relative;
-        }
+    .marquee {
+        display: inline-block;
+        font-size: 6rem;
+        font-weight: bold;
+        color: white;
+        animation: marquee 2s linear infinite;
+        position: relative;
+    }
 
-        @keyframes marquee {
-            -100% { transform: translateX(100%); }
-            100% { transform: translateX(-100%); }
-        }
+    @keyframes marquee {
+        -100% { transform: translateX(100%); }
+        100% { transform: translateX(-100%); }
+    }
 
-        h2 {
-            color: #333;
-            margin-top: 20px;
-        }
+    h2 {
+        color: #333;
+        margin-top: 20px;
+    }
 
-        .gallery img {
-            width: 100%;
-            max-width: 400px; 
-            margin: 10px;
-            border-radius: 4px;
-        }
+    .gallery img {
+        width: 100%;
+        max-width: 400px; 
+        margin: 10px;
+        border-radius: 4px;
+    }
 
-        .nav-bar {
-            background-color: #f8f8f8;
-            padding: 20px;
-            text-align: center;
-        }
+    .nav-bar {
+        background-color: #f8f8f8;
+        padding: 20px;
+        text-align: center;
+    }
 
-        .nav-bar a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
+    .nav-bar a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
 
-        .nav-bar a:hover {
-            text-decoration: underline;
-            color: #007BFF; /* Change color on hover */
-        }
-    </style>
+    .nav-bar a:hover {
+        text-decoration: underline;
+        color: #007BFF; /* Change color on hover */
+    }
+
+    .container {
+        text-align: center; /* Center the text */
+        padding: 20px; /* Add some padding */
+    }
+</style>
+
 </head>
 <body>
     <header class="banner">
