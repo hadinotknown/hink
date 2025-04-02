@@ -1,15 +1,13 @@
-
 @font-face {
-    font-family: 'AlteHassGroteskBold';
-    src: url('AlteHaasGroteskBold.tff') format('truetype');
+    font-family: 'Alte Haas Grotesk';
+    src: url('AlteHaasGroteskBold.ttf') format('ttf'), /* Adjust the path and format as needed */
+         url('AlteHaasGroteskBold.ttf') format('ttf'); /* Add other formats if necessary */
+    font-weight: normal;
+    font-style: normal;
 }
 
 body {
-    font-family: 'AlteHassGroteskBold', sans-serif;
-}
-
-body {
-    font-family: AlteHassGroteskBold;
+    font-family: 'Alte Haas Grotesk', sans-serif; /* Fallback to sans-serif */
     background-color: #f4f4f4;
     color: #111;
     text-align: center;
@@ -22,7 +20,6 @@ body {
     white-space: nowrap;
     background: black;
     padding: 40px 0;
-    
 }
 
 .marquee {
@@ -30,7 +27,6 @@ body {
     font-size: 6rem;
     font-weight: bold;
     color: white;
-   
 }
 
 @keyframes marquee {
@@ -45,7 +41,7 @@ body {
 h2 {
     font-size: 2rem;
     margin-top: 20px;
-    font-family: sans-serif;
+    font-family: 'Alte Haas Grotesk', sans-serif; /* Fallback to sans-serif */
 }
 
 ul {
