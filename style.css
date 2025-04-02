@@ -1,24 +1,54 @@
-@font-face {
-    font-family: 'Alte Haas Grotesk';
-    src: url('AlteHaasGroteskBold.woff2') format('woff2'),
-         url('AlteHaasGroteskBold.woff') format('woff'),
-         url('AlteHaasGroteskBold.ttf') format('truetype');
-    font-weight: normal; /* Adjust if using bold */
-    font-style: normal;
+body {
+    font-family: AlteHaasGrotesk, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
 }
+
+.banner {
+    overflow: hidden;
+    white-space: nowrap;
+    background: black;
+    padding: 40px 0;
+    text-align: center;
+}
+
 .marquee {
-    display: flex; /* Use flexbox to align letters */
-    justify-content: center; /* Center the letters */
-    overflow: hidden; /* Hide overflow */
-    white-space: nowrap; /* Prevent wrapping */
-    background: black; /* Background color */
-    padding: 40px 0; /* Padding */
+    display: inline-block;
+    font-size: 6rem;
+    font-weight: bold;
+    color: white;
+    position: relative;
 }
-.marquee span {
-    font-size: 6rem; /* Font size */
-    font-weight: bold; /* Font weight */
-    color: white; /* Text color */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Transition for smooth effect */
+
+.letter {
+    display: inline-block;
+    opacity: 0; /* Start hidden */
+    transform: translateX(100vw); /* Start off-screen to the right */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transition for animation */
+}
+
+h2 {
+    color: #333;
+    margin-top: 20px;
+}
+
+.nav-bar {
+    background-color: #f8f8f8;
+    padding: 10px;
+    text-align: center;
+}
+
+.nav-bar a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.nav-bar a:hover {
+    text-decoration: underline;
+    color: #007BFF; /* Change color on hover */
 }
 
 .container {
