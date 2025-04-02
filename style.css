@@ -1,8 +1,9 @@
 @font-face {
     font-family: 'Alte Haas Grotesk';
-    src: url('AlteHaasGroteskBold.ttf') format('truetype'), /* Adjust the path and format as needed */
-         url('AlteHaasGroteskBold.ttf') format('truetype'); /* Add other formats if necessary */
-    font-weight: normal;
+    src: url('AlteHaasGroteskBold.woff2') format('woff2'),
+         url('AlteHaasGroteskBold.woff') format('woff'),
+         url('AlteHaasGroteskBold.ttf') format('truetype');
+    font-weight: normal; /* Adjust if using bold */
     font-style: normal;
 }
 
