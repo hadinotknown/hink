@@ -28,11 +28,12 @@ body {
     font-size: 6rem;
     font-weight: bold;
     color: white;
+    animation: marquee 10s linear infinite; /* Add animation for scrolling effect */
 }
 
 @keyframes marquee {
-    from { transform: translateX(100%); }
-    to { transform: translateX(-100%); }
+    from { transform: translateX(100%); } /* Start off-screen to the right */
+    to { transform: translateX(-100%); } /* Move to off-screen to the left */
 }
 
 .container {
