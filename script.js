@@ -1,3 +1,4 @@
+
 <script>
     const marqueeText = "HINK"; // The text to animate
     const marqueeContainer = document.querySelector('.marquee');
