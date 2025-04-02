@@ -36,8 +36,16 @@ function animateLetters() {
             }, delay);
             delay += 500; // Increase delay for the next letter
         });
+        
         // Restart animation after a delay
-        setTimeout(animateLetters, letters.length * 500 + 1000); // Wait for all letters to animate
+        setTimeout(() => {
+            // Move letters back to the right for the next cycle
+            letters.forEach((letter) => {
+                letter.style.opacity = 0; // Reset opacity
+                letter.style.transform = `translateX(100vw)`; // Move off-screen to the right
+            });
+            animateLetters(); // Restart the animation
+        }, letters.length * 500 + 1000); // Wait for all letters to disappear
     }, letters.length * 500 + 1000); // Wait for all letters to appear
 }
 
