@@ -27,12 +27,12 @@
             font-weight: bold;
             color: white;
             animation: marquee 5s linear infinite; /* Animation for scrolling text */
-            position: relative; /* Position relative for the chomping effect */
+            position: relative;
         }
 
         @keyframes marquee {
-            0% { transform: translateX(100%); clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); } /* Start off-screen to the right */
-            100% { transform: translateX(-100%); clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); } /* Move to off-screen to the left */
+            0% { transform: translateX(100%); } /* Start off-screen to the right */
+            100% { transform: translateX(-100%); } /* Move to off-screen to the left */
         }
 
         h2 {
