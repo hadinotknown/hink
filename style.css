@@ -6,6 +6,22 @@
     font-weight: normal; /* Adjust if using bold */
     font-style: normal;
 }
+.marquee {
+    display: flex; /* Use flexbox to align letters */
+    justify-content: center; /* Center the letters */
+    overflow: hidden; /* Hide overflow */
+    white-space: nowrap; /* Prevent wrapping */
+    background: black; /* Background color */
+    padding: 40px 0; /* Padding */
+}
+
+.marquee span {
+    font-size: 6rem; /* Font size */
+    font-weight: bold; /* Font weight */
+    color: white; /* Text color */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transition for smooth effect */
+}
+
 .container {
     text-align: center; /* Center the text */
     padding: 20px; /* Add some padding */
