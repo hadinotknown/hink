@@ -6,20 +6,6 @@
     font-weight: normal; /* Adjust if using bold */
     font-style: normal;
 }
-.marquee {
-    display: inline-block;
-    font-size: 6rem;
-    font-weight: bold;
-    color: white;
-    animation: marquee 15s linear infinite; /* Increase duration for smoother movement */
-    position: relative;
-}
-
-@keyframes marquee {
-    0% { transform: translateX(100%); } /* Start off-screen to the right */
-    100% { transform: translateX(-100%); } /* Move off-screen to the left */
-}
-
 .container {
     text-align: center; /* Center the text */
     padding: 20px; /* Add some padding */
