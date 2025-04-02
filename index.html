@@ -18,26 +18,66 @@
             font-size: 6rem;
             font-weight: bold;
             color: white;
-           
+            animation: marquee 10s linear infinite; /* Added animation */
         }
 
         @keyframes marquee {
             from { transform: translateX(100%); }
             to { transform: translateX(-100%); }
         }
+
+        .container {
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .gallery img {
+            width: 100%; /* Responsive images */
+            max-width: 300px; /* Limit max width */
+            margin: 10px;
+        }
+
+        /* Navigation Bar Styles */
+        .nav-bar {
+            background-color: #f8f8f8;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .nav-bar a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .nav-bar a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
-    <div class="banner">
+    <header class="banner">
         <div class="marquee">HINK</div>
-    </div>
+    </header>
     
-    <div class="container">
-        <h2>Upcoming Shows</h2>
-        <p id="shows">[04/05 @ The Valley]</p>
+    <nav class="nav-bar">
+        <a href="#merch">Merch</a>
+        <a href="#shows">Shows</a>
+        <a href="#music">Music</a>
+        <a href="#lyrics">Lyrics</a>
+    </nav>
+
+    <main class="container">
+        <h2 id="shows">Upcoming Shows</h2>
+        <p>[04/05 @ The Valley]</p>
 
         <h2>Next Release</h2>
-        <p id="news">[""Restart/All You Can Do is Laugh"" + ""Had I Not Known I Was Already Dead I Would Mourn My Loss of Life""]</p>
+        <p id="news">["Restart/All You Can Do is Laugh" + "Had I Not Known I Was Already Dead I Would Mourn My Loss of Life"]</p>
 
         <h2>Our Music</h2>
         <ul>
@@ -47,12 +87,11 @@
         </ul>
 
         <h2>Lyrics</h2>
-      
         <div class="gallery">
             <img src="lyrics1.jpg" alt="Lyrics Page 1">
             <img src="lyrics2.jpg" alt="Lyrics Page 2">
         </div>
-    </div>
+    </main>
 
     <script src="script.js"></script>
 </body>
