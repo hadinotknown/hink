@@ -83,8 +83,8 @@
             const letters = marqueeContainer.querySelectorAll('.letter');
             let delay = 0;
 
+            // Animate each letter appearing
             letters.forEach((letter, index) => {
-                // Animate each letter appearing
                 setTimeout(() => {
                     letter.style.opacity = 1; // Fade in the letter
                     letter.style.transform = `translateX(0)`; // Move to the center
@@ -107,8 +107,10 @@
             }, letters.length * 500 + 1000); // Wait for all letters to appear
         }
 
-        createMarquee();
-        animateLetters();
+        window.onload = () => {
+            createMarquee();
+            animateLetters();
+        };
     </script>
 </head>
 <body>
@@ -129,7 +131,6 @@
 
         <h2>Next Release</h2>
         <p id="news">Restart/All You Can Do is Laugh + Had I Not Known I Was Already Dead I Would Mourn My Loss of Life</p>
-
         <h2>Our Music</h2>
         <ul>
             <a href="#">Spotify</a>
