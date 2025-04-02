@@ -17,7 +17,7 @@ body {
 }
 
 .banner {
-    overflow: shown; /* Hides any content that overflows the banner */
+    overflow: hidden; /* Hides any content that overflows the banner */
     white-space: nowrap; /* Prevents the text from wrapping to the next line */
     background: black; /* Sets the background color of the banner */
     padding: 40px 0; /* Adds vertical padding to the banner */
