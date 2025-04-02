@@ -70,7 +70,7 @@
         padding: 20px; /* Add some padding */
     }
 </style>
-<script>
+ <script>
         const marqueeText = "HINK"; // The text to animate
         const marqueeContainer = document.querySelector('.marquee');
 
@@ -90,31 +90,36 @@
         // Function to animate letters
         function animateLetters() {
             const letters = marqueeContainer.querySelectorAll('span');
+            let delay = 0;
+
             letters.forEach((letter, index) => {
+                // Animate each letter appearing
                 setTimeout(() => {
                     letter.style.opacity = 1; // Fade in the letter
                     letter.style.transform = `translateX(0)`; // Move to the center
                     letter.style.transition = 'opacity 0.5s ease, transform 0.5s ease'; // Transition effect
-                }, index * 500); // Delay based on index
+                }, delay);
+                delay += 500; // Increase delay for the next letter
             });
 
             // Reset after all letters have been animated
             setTimeout(() => {
+                delay = 0; // Reset delay for disappearing letters
                 letters.forEach((letter, index) => {
                     setTimeout(() => {
                         letter.style.opacity = 0; // Hide letters again
                         letter.style.transform = `translateX(-100vw)`; // Move to the left
-                    }, index * 500); // Delay based on index
+                    }, delay);
+                    delay += 500; // Increase delay for the next letter
                 });
-                setTimeout(animateLetters, letters.length * 500 + 1000); // Restart animation after a delay
-            }, letters.length * 500 + 1000); // Wait for all letters to animate
+                // Restart animation after a delay
+                setTimeout(animateLetters, letters.length * 500 + 1000); // Wait for all letters to animate
+            }, letters.length * 500 + 1000); // Wait for all letters to appear
         }
 
         createMarquee();
         animateLetters();
     </script>
-
-
 </head>
 <body>
     <header class="banner">
