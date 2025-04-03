@@ -13,8 +13,8 @@ function createMarquee() {
         fullText += marqueeText + spaceBetween; // Add "HINK" and space
     }
 
-    // Set the text content
-    marqueeContainer.textContent = fullText.trim(); // Set the text content
+    // Set the text content twice for seamless scrolling
+    marqueeContainer.innerHTML = fullText.trim() + fullText.trim(); // Duplicate for seamless scrolling
 }
 
 // Function to animate the marquee
