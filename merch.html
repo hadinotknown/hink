@@ -14,30 +14,32 @@
             border-radius: 5px; /* Rounded corners */
             transition: opacity 0.5s; /* Smooth transition for appearance */
         }
+
+        .image-container {
+            display: none; /* Initially hide the image container */
+        }
     </style>
 </head>
 <body>
     <header class="banner">
-    <a href="https://hadinotknown.github.io/hink" class="marquee" style="text-decoration: none;">HINK</a>
+        <a href="https://hadinotknown.github.io/hink" class="marquee" style="text-decoration: none;">HINK</a>
     </header>
 
     <main class="container">
         <h2>Merch</h2>
         <p>N/A</p>
-        <div class="image-container delayed-link">
-        <a href="lyrics.html" id="lyricspagelink">
-        <img src="RedHeadFurrowed.jpeg" alt="Selfie" class="fade-in stretched-image">
-        </a>
-        
-    </div>
+        <div class="image-container delayed-link" id="imageContainer">
+            <a href="lyrics.html" id="lyricspagelink">
+                <img src="RedHeadFurrowed.jpeg" alt="Selfie" class="fade-in stretched-image">
+            </a>
+        </div>
     </main>
 
-
     <script>
-        // JavaScript to show the link after 15 seconds
+        // JavaScript to show the image container after 15 seconds
         setTimeout(function() {
-            var link = document.getElementById('lyricspagelink');
-            link.style.display = 'inline-block'; // Change display to inline-block
+            var container = document.getElementById('imageContainer');
+            container.style.display = 'block'; // Change display to block to show the container
         }, 15000); // 15000 milliseconds = 15 seconds
     </script>
     <script src="script.js"></script> <!-- Link to the JavaScript file --> 
