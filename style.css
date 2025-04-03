@@ -72,12 +72,19 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 200vh; /* Full viewport height */
+    height: 40vh; /* Full viewport height */
+    width: 100vw
 }
+
+.stretched-image {
+            transform: scaleX(1.5); /* Stretch the image 1.5 times its original width */
+            height: auto; /* Maintain aspect ratio */
+        }
 
 .fade-in {
     opacity: 0; /* Start fully transparent */
-    animation: fadeIn 60s forwards; /* Fade in over 2 seconds */
+    animation-delay: 5s
+    animation: fadeIn 1s forwards;
 }
 
 @keyframes fadeIn {
