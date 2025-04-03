@@ -6,8 +6,9 @@
     font-weight: bold;
     font-style: normal;
 }
+
 body {
-    font-family: 'AlteHaasGrotesk', sans serif;
+    font-family: 'AlteHaasGroteskBold', sans-serif; /* Corrected font-family name and syntax */
     margin: 0;
     background-color: #f4f4f4;
 }
