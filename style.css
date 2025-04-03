@@ -27,7 +27,7 @@ body {
     font-weight: bold;
     color: white;
     position: relative;
-    animation: marquee 6s linear infinite; /* Add animation for continuous movement */
+    animation: marquee 5s linear infinite; /* Add animation for continuous movement */
 }
 
 @keyframes marquee {
@@ -38,8 +38,8 @@ body {
 .letter {
     display: inline-block;
     opacity: 0; /* Start hidden */
-    transform: translateX(0% + 100vw); /* Start off-screen to the right */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Transition for animation */
+    transform: translateX(calc(0%)); /* Start off-screen to the right */
+    transition: opacity 0.1s ease, transform 0.1s ease; /* Transition for animation */
 }
 
 h2 {
