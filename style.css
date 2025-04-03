@@ -1,12 +1,13 @@
 @font-face {
     font-family: 'AlteHaasGroteskBold';
-    src:
-        url('AlteHaasGroteskBold.ttf') format('truetype');
+    src: url('AlteHaasGroteskBold.woff2') format('woff2'),
+         url('AlteHaasGroteskBold.woff') format('woff'),
+         url('AlteHaasGroteskBold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 }
 body {
-    font-family: AlteHaasGrotesk;
+    font-family: 'AlteHaasGrotesk', sans serif;
     margin: 0;
     background-color: #f4f4f4;
 }
