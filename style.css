@@ -7,12 +7,12 @@
     font-style: normal;
 }
 
-
 body {
-    font-family: 'AlteHaasGroteskBold', sans-serif; /* Corrected font-family name and syntax */
+    font-family: 'AlteHaasGroteskBold', sans-serif;
     margin: 0;
     background-color: #f4f4f4;
 }
+
 .banner {
     overflow: hidden;
     white-space: nowrap;
@@ -27,19 +27,11 @@ body {
     font-weight: bold;
     color: white;
     position: relative;
-    animation: marquee 5s linear infinite; /* Add animation for continuous movement */
-}
-
-@keyframes marquee {
-    0% { transform: translateX(calc(100% + 50vw)); }
-    100% { transform: translateX(calc(-100% - 50vw)); }
 }
 
 .letter {
     display: inline-block;
-    opacity: 0; /* Start hidden */
-    transform: translateX(calc(0%)); /* Start off-screen to the right */
-    transition: opacity 0.1s ease, transform 0.1s ease; /* Transition for animation */
+    opacity: 1; /* Keep letters visible */
 }
 
 h2 {
@@ -63,10 +55,10 @@ h2 {
 
 .nav-bar a:hover {
     text-decoration: underline;
-    color: #007BFF; /* Change color on hover */
+    color: #007BFF;
 }
 
 .container {
-    text-align: center; /* Center the text */
-    padding: 20px; /* Add some padding */
+    text-align: center;
+    padding: 20px;
 }
