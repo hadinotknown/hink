@@ -78,7 +78,7 @@ h2 {
 .fade-in {
     opacity: 0; /* Start fully transparent */
     animation: fadeIn 1s forwards;
-    animation-delay: 5s;
+    animation-delay: 10s;
 }
 
 @keyframes fadeIn {
