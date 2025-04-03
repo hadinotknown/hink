@@ -1,6 +1,7 @@
 @font-face {
     font-family: 'AlteHaasGroteskBold';
-    src: url('AlteHaasGroteskBold.ttf') format('truetype');
+    src:
+        url('AlteHaasGroteskBold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 }
