@@ -70,8 +70,9 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40vh; /* Full viewport height */
-    width: 100vw
+    height: auto; /* Full viewport height */
+    width: 100vw;
+    overflow: hidden;
 }
 
 
