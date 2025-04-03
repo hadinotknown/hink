@@ -27,6 +27,7 @@ body {
     font-weight: bold;
     color: white;
     position: relative;
+    white-space: nowrap; /* Prevent line breaks */
 }
 
 .letter {
