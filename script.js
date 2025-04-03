@@ -1,4 +1,4 @@
-const marqueeText = "HINK HINK HINK HINK HINK HINK HINK HINK"; // Repeat the text for continuous effect
+const marqueeText = "HINK"; // Repeat the text for continuous effect
 const marqueeContainer = document.querySelector('.marquee');
 
 // Function to create spans for each letter
