@@ -9,14 +9,14 @@
 </head>
 <body>
     <header class="banner">
-        <a href="index.html"><div class="marquee">HINK</div><a>
+        <a href="homepage"><div class="marquee">HINK</div><a>
     </header>
     
     <nav class="nav-bar">
-    <a href="Merch.html">Merch</a>
-    <a href="Shows.html">Shows</a>
-    <a href="Music.html">Music</a>
-    <a href="Lyrics.html">Lyrics</a>
+    <a href="merch">Merch</a>
+    <a href="shows">Shows</a>
+    <a href="music">Music</a>
+    <a href="lyrics">Lyrics</a>
     </nav>
 
     <main class="container">
