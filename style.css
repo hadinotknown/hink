@@ -1,9 +1,16 @@
+@font-face {
+    font-family: 'AlteHaasGroteskBold';
+    src: url('AlteHaasGroteskBold.woff2') format('woff2'),
+         url('AlteHaasGroteskBold.woff') format('woff'),
+         url('AlteHaasGroteskBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
 body {
     font-family: AlteHaasGrotesk;
     margin: 0;
     background-color: #f4f4f4;
 }
-
 .banner {
     overflow: hidden;
     white-space: nowrap;
