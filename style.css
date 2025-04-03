@@ -20,6 +20,8 @@ body {
     text-align: center;
 }
 
+<div class="marquee">HINK HINK HINK HINK HINK HINK HINK HINK</div>
+
 .marquee {
     display: inline-block;
     font-size: 6rem;
