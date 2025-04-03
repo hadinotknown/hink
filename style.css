@@ -92,3 +92,8 @@ h2 {
             height: auto; /* Maintain aspect ratio */
         }
 
+a img {
+    display: inline-block; /* This will apply to images inside links */
+    border: 2px; /* Example style */
+    border-radius: 5px; /* Example style */
+}
