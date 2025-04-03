@@ -1,5 +1,5 @@
 const marqueeText = "HINK"; // The text to animate
-const spaceBetween = "\u00A0\u00A0"; // Non-breaking spaces for separation
+const spaceBetween = "\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"; // Non-breaking spaces for separation
 const marqueeContainer = document.querySelector('.marquee');
 
 // Function to create the marquee text
