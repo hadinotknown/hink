@@ -74,15 +74,11 @@ h2 {
     width: 100vw
 }
 
-.stretched-image {
-            transform: scaleX(1.5); /* Stretch the image 1.5 times its original width */
-            height: auto; /* Maintain aspect ratio */
-        }
 
 .fade-in {
     opacity: 0; /* Start fully transparent */
-    animation-delay: 5s
     animation: fadeIn 1s forwards;
+    animation-delay: 5s
 }
 
 @keyframes fadeIn {
@@ -90,3 +86,9 @@ h2 {
         opacity: 1; /* End fully opaque */
     }
 }
+
+.stretched-image {
+            transform: scaleX(1.5); /* Stretch the image 1.5 times its original width */
+            height: auto; /* Maintain aspect ratio */
+        }
+
