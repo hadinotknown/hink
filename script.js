@@ -1,4 +1,4 @@
-const marqueeText = "HINK"; // The text to animate
+const marqueeText = "HINK HINK HINK HINK HINK HINK HINK HINK"; // Repeat the text for continuous effect
 const marqueeContainer = document.querySelector('.marquee');
 
 // Function to create spans for each letter
@@ -13,43 +13,22 @@ function createMarquee() {
 }
 
 // Function to animate letters
-function animateLetters() {
+function animateMarquee() {
     const letters = marqueeContainer.querySelectorAll('.letter');
-    let delay = 0;
+    const totalWidth = marqueeContainer.scrollWidth; // Get the total width of the marquee
+    marqueeContainer.style.width = `${totalWidth}px`; // Set the width of the container
 
-    // Animate each letter appearing
-    letters.forEach((letter, index) => {
-        setTimeout(() => {
-            letter.style.opacity = 1; // Fade in the letter
-            letter.style.transform = `translateX(0)`; // Move to the center
-        }, delay);
-        delay += 500; // Increase delay for the next letter
+    // Start the animation
+    marqueeContainer.animate([
+        { transform: 'translateX(100%)' }, // Start from the right
+        { transform: 'translateX(-100%)' } // End at the left
+    ], {
+        duration: 10000, // Adjust duration for speed
+        iterations: Infinity // Loop indefinitely
     });
-
-    // Reset after all letters have been animated
-    setTimeout(() => {
-        delay = 0; // Reset delay for disappearing letters
-        letters.forEach((letter, index) => {
-            setTimeout(() => {
-                letter.style.opacity = 0; // Hide letters again
-                letter.style.transform = `translateX(-100vw)`; // Move to the left
-            }, delay);
-            delay += 500; // Increase delay for the next letter
-        });
-        
-        // Restart animation after a delay
-        setTimeout(() => {
-            // Move letters back to the right for the next cycle
-            letters.forEach((letter) => {
-                letter.style.opacity = 0; // Reset opacity
-                letter.style.transform = `translateX(100vw)`; // Move off-screen to the right
-            });
-            animateLetters(); // Restart the animation
-        }, letters.length * 500 + 1000); // Wait for all letters to disappear
-    }, letters.length * 500 + 1000); // Wait for all letters to appear
 }
 
 window.onload = () => {
     createMarquee();
-    animateLetters();
+    animateMarquee();
 };
