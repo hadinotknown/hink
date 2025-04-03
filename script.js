@@ -1,10 +1,11 @@
-const marqueeText = "HINK HINK HINK HINK HINK HINK HINK HINK"; // The text to animate
+const marqueeText = "HINK"; // The text to animate
+const spaceBetween = "   "; // Define the space between repetitions
 const marqueeContainer = document.querySelector('.marquee');
 
 // Function to create spans for each letter
 function createMarquee() {
     marqueeContainer.innerHTML = ''; // Clear existing content
-    const fullText = marqueeText + "   "; // Add space for separation
+    const fullText = marqueeText + spaceBetween; // Add space for separation
     const textToDisplay = fullText + fullText; // Duplicate the text for seamless scrolling
 
     for (let letter of textToDisplay) {
