@@ -5,8 +5,16 @@ const marqueeContainer = document.querySelector('.marquee');
 // Function to create spans for each letter and spaces
 function createMarquee() {
     marqueeContainer.innerHTML = ''; // Clear existing content
-    const fullText = marqueeText + spaceBetween; // Add non-breaking space for separation
-    const textToDisplay = fullText + fullText; // Duplicate the text for seamless scrolling
+    const repetitions = 5; // Number of times to repeat the text
+    let fullText = '';
+
+    // Build the full text with spaces
+    for (let i = 0; i < repetitions; i++) {
+        fullText += marqueeText + spaceBetween; // Add "HINK" and space
+    }
+
+    // Duplicate the full text for seamless scrolling
+    const textToDisplay = fullText + fullText; // Duplicate for seamless scrolling
 
     for (let i = 0; i < textToDisplay.length; i++) {
         const span = document.createElement('span');
