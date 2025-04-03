@@ -1,17 +1,17 @@
 const marqueeText = "HINK"; // The text to animate
-const spaceBetween = "   "; // Define the space between repetitions
+const spaceBetween = "\u00A0\u00A0\u00A0"; // Non-breaking spaces for separation
 const marqueeContainer = document.querySelector('.marquee');
 
 // Function to create spans for each letter and spaces
 function createMarquee() {
     marqueeContainer.innerHTML = ''; // Clear existing content
-    const fullText = marqueeText + spaceBetween; // Add space for separation
+    const fullText = marqueeText + spaceBetween; // Add non-breaking space for separation
     const textToDisplay = fullText + fullText; // Duplicate the text for seamless scrolling
 
-    for (let letter of textToDisplay) {
+    for (let i = 0; i < textToDisplay.length; i++) {
         const span = document.createElement('span');
         span.className = 'letter'; // Add class for styling
-        span.textContent = letter; // Set the text content to the letter or space
+        span.textContent = textToDisplay[i]; // Set the text content to the letter or space
         marqueeContainer.appendChild(span);
     }
 }
