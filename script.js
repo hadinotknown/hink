@@ -14,7 +14,7 @@ function createMarquee() {
     }
 
     // Set the text content twice for seamless scrolling
-    marqueeContainer.innerHTML = fullText.trim() + "\u00A0\u00A0" + fullText.trim(); // Duplicate for seamless scrolling
+    marqueeContainer.innerHTML = fullText.trim() + spaceBetween + fullText.trim(); // Duplicate for seamless scrolling
 }
 
 // Function to animate the marquee
