@@ -20,7 +20,6 @@ body {
     text-align: center;
 }
 
-
 .marquee {
     display: inline-block;
     font-size: 6rem;
@@ -31,8 +30,8 @@ body {
 }
 
 @keyframes marquee {
-    0% { transform: translateX(100% + 50vw); }
-    100% { transform: translateX(-100% - 50vw); }
+    0% { transform: translateX(calc(100% + 50vw)); }
+    100% { transform: translateX(calc(-100% - 50vw)); }
 }
 
 .letter {
