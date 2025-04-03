@@ -32,7 +32,7 @@ function animateMarquee() {
         const elapsed = timestamp - startTime;
 
         // Calculate the new position
-        const position = (containerWidth + elapsed / 10) % (totalWidth); // Adjust speed by changing the divisor
+        const position = (containerWidth + elapsed / 10) % (totalWidth / 2); // Adjust speed by changing the divisor
         marqueeContainer.style.transform = `translateX(${-position}px)`;
 
         requestAnimationFrame(step);
