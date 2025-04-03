@@ -1,11 +1,13 @@
-const marqueeText = "HINK HINK HINK HINK HINK HINK HINK HINK "; // Repeat the text for continuous effect
+const marqueeText = "HINK HINK HINK HINK HINK HINK HINK HINK"; // The text to animate
 const marqueeContainer = document.querySelector('.marquee');
 
 // Function to create spans for each letter
 function createMarquee() {
     marqueeContainer.innerHTML = ''; // Clear existing content
     const fullText = marqueeText + "   "; // Add space for separation
-    for (let letter of fullText) {
+    const textToDisplay = fullText + fullText; // Duplicate the text for seamless scrolling
+
+    for (let letter of textToDisplay) {
         const span = document.createElement('span');
         span.className = 'letter'; // Add class for styling
         span.textContent = letter;
@@ -28,7 +30,7 @@ function animateMarquee() {
         const elapsed = timestamp - startTime;
 
         // Calculate the new position
-        const position = (containerWidth + elapsed / 20) % totalWidth; // Adjust speed by changing the divisor
+        const position = (containerWidth + elapsed / 10) % (totalWidth / 2); // Adjust speed by changing the divisor
         marqueeContainer.style.transform = `translateX(${-position}px)`;
 
         requestAnimationFrame(step);
