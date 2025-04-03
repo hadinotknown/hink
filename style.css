@@ -37,7 +37,7 @@ body {
 .letter {
     display: inline-block;
     opacity: 0; /* Start hidden */
-    transform: translateX(100vw); /* Start off-screen to the right */
+    transform: translateX(0% + 100vw); /* Start off-screen to the right */
     transition: opacity 0.5s ease, transform 0.5s ease; /* Transition for animation */
 }
 
