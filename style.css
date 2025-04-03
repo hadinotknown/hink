@@ -64,6 +64,10 @@ h2 {
     padding: 20px;
 }
 
+.ul {
+    text-align: center;
+}
+
 .image-container {
     /* Optional: Center the image container */
     display: flex;
