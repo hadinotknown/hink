@@ -1,5 +1,5 @@
 body {
-    font-family: AlteHaasGrotesk, sans-serif;
+    font-family: AlteHaasGrotesk;
     margin: 0;
     background-color: #f4f4f4;
 }
@@ -22,14 +22,14 @@ body {
 }
 
 @keyframes marquee {
-    0% { transform: translateX(100% + 25vw); }
-    100% { transform: translateX(-100% - 25vw); }
+    0% { transform: translateX(100% + 50vw); }
+    100% { transform: translateX(-100% - 50vw); }
 }
 
 .letter {
     display: inline-block;
     opacity: 0; /* Start hidden */
-    transform: translateX(100%); /* Start off-screen to the right */
+    transform: translateX(100vw); /* Start off-screen to the right */
     transition: opacity 0.5s ease, transform 0.5s ease; /* Transition for animation */
 }
 
