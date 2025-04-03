@@ -63,3 +63,22 @@ h2 {
     text-align: center;
     padding: 20px;
 }
+
+.image-container {
+    /* Optional: Center the image container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+
+.fade-in {
+    opacity: 0; /* Start fully transparent */
+    animation: fadeIn 2s forwards; /* Fade in over 2 seconds */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* End fully opaque */
+    }
+}
