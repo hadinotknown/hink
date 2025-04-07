@@ -14,11 +14,6 @@
             border-radius: 0px; /* Rounded corners */
             transition: opacity 0.5s; /* Smooth transition for appearance */
         }
-
-        .image-container {
-            display: none; /* Initially hide the image container */
-            height: 100;
-        }
     </style>
 </head>
 <body>
@@ -36,12 +31,17 @@
     </div>
 
     </main>
-
+    
+    <audio id="audioPlayer" src="Wah.m4a" preload="auto"></audio>
+    
     <script>
         // JavaScript to show the image container after 15 seconds
         setTimeout(function() {
-        var container = document.getElementById('fullScreenImageContainer');
-        container.style.display = 'block'; // Change display to block to show the container
+            var container = document.getElementById('fullScreenImageContainer');
+            var audioPlayer = document.getElementById('audioPlayer');
+            
+            container.style.display = 'block'; // Change display to block to show the container
+            audioPlayer.play(); // Play the audio
         }, 15000); // 15000 milliseconds = 15 seconds
     </script>
     <script src="script.js"></script> <!-- Link to the JavaScript file --> 
