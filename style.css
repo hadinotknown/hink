@@ -72,6 +72,21 @@ ul li {
     display: inline; /* Make the list item inline */
 }
 
+.image-container {
+    width: 100vw; /* Full viewport width */
+    height: auto; /* Allow height to adjust based on content */
+    overflow: auto; /* Prevent overflow */
+}
+
+.image-container img {
+    width: 100%; /* Make the image take the full width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the container without distortion */
+    display: block; /* Remove any inline spacing */
+    margin: 0; /* Remove any margin */
+    padding: 0; /* Remove any padding */
+}
+
 .lyric-image-container {
     width: 100vw; /* Full viewport width */
     height: auto; /* Allow height to adjust based on content */
