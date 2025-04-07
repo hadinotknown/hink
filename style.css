@@ -72,14 +72,14 @@ ul li {
     display: inline; /* Make the list item inline */
 }
 
-.image-container {
+.lyric-image-container {
     width: 100vw; /* Full viewport width */
     height: auto; /* Allow height to adjust based on content */
     overflow: auto; /* Prevent overflow */
-
+    margin-left: -20px; /* Adjust this value to nudge the container to the left */
 }
 
-.image-container img {
+.lyric-image-container img {
     width: 100%; /* Make the image take the full width */
     height: auto; /* Maintain aspect ratio */
     object-fit: cover; /* Ensure the image covers the container without distortion */
