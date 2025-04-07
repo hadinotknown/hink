@@ -94,7 +94,7 @@ h2 {
 
 a img {
     display: inline-block; /* This will apply to images inside links */
-    border: 2px; /* Example style */
+    border: 0px; /* Example style */
     border-radius: 5px; /* Example style */
 }
 
@@ -104,14 +104,25 @@ a img {
     top: 0; /* Align to the top */
     left: 0; /* Align to the left */
     width: 100vw; /* Full viewport width */
-    height: auto; /* Allow height to adjust based on content */
-    background-color: rgba(0, 0, 0, 0.8); /* Optional: Add a semi-transparent background */
+    height: 100vh; /* Full viewport height to cover the entire screen */
     z-index: 1000; /* Ensure it appears above other content */
     overflow: auto; /* Allow scrolling if content exceeds the viewport */
 }
 
 #fullScreenImageContainer img {
     width: 100%; /* Make the image take the full width */
-    height: auto; /* Maintain aspect ratio */
+    height: 100%; /* Make the image take the full height */
     object-fit: cover; /* Ensure the image covers the container without distortion */
+    display: block; /* Remove any inline spacing */
 }
+
+/* Optional: Add media query for better mobile handling */
+@media (max-width: 768px) {
+    #fullScreenImageContainer img {
+        height: auto; /* Maintain aspect ratio */
+        width: auto; /* Allow width to adjust */
+        max-width: 100%; /* Ensure it doesn't exceed the viewport width */
+        max-height: 100vh; /* Ensure it doesn't exceed the viewport height */
+    }
+}
+
