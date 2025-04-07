@@ -179,7 +179,7 @@ a img {
 }
 
 iframe {
-            width: 100%; /* Full width */
-            height: 600px; /* Set height as needed */
+            width: 100vw; /* Full width */
+            height: 2000px; /* Set height as needed */
             border: none; /* Remove border */
         }
