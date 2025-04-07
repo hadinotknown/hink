@@ -68,7 +68,7 @@ h2 {
 .image-container {
     width: 100vw; /* Full viewport width */
     height: auto; /* Allow height to adjust based on content */
-    overflow: hidden; /* Prevent overflow */
+    overflow: auto; /* Prevent overflow */
     margin-left: -20px; /* Adjust this value to nudge the container to the left */
 }
 
