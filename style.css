@@ -66,12 +66,19 @@ h2 {
     text-align: center;
 }
 .image-container {
-    /* Optional: Center the image container */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60vh; /* Full viewport height */
-    width: 100vw;
+    width: 100vw; /* Full viewport width */
+    height: auto; /* Allow height to adjust based on content */
+    overflow: hidden; /* Prevent overflow */
+    margin-left: -20px; /* Adjust this value to nudge the container to the left */
+}
+
+.image-container img {
+    width: 100%; /* Make the image take the full width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the container without distortion */
+    display: block; /* Remove any inline spacing */
+    margin: 0; /* Remove any margin */
+    padding: 0; /* Remove any padding */
 }
 
 
