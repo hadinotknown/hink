@@ -76,7 +76,7 @@ ul li {
     width: 100vw; /* Full viewport width */
     height: auto; /* Allow height to adjust based on content */
     overflow: auto; /* Prevent overflow */
-    margin-left: -20px; /* Adjust this value to nudge the container to the left */
+
 }
 
 .image-container img {
