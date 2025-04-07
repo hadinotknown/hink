@@ -100,19 +100,18 @@ a img {
 
 #fullScreenImageContainer {
     display: none; /* Initially hide the image container */
-    position: fixed; /* Use fixed positioning to cover the entire screen */
+    position: absolute; /* Change to absolute positioning */
     top: 0; /* Align to the top */
     left: 0; /* Align to the left */
     width: 100vw; /* Full viewport width */
-    height: 100vh; /* Full viewport height */
+    height: auto; /* Allow height to adjust based on content */
     background-color: rgba(0, 0, 0, 0.8); /* Optional: Add a semi-transparent background */
-    justify-content: center; /* Center the image horizontally */
-    align-items: center; /* Center the image vertically */
     z-index: 1000; /* Ensure it appears above other content */
+    overflow: auto; /* Allow scrolling if content exceeds the viewport */
 }
 
 #fullScreenImageContainer img {
     width: 100%; /* Make the image take the full width */
-    height: 100%; /* Make the image take the full height */
+    height: auto; /* Maintain aspect ratio */
     object-fit: cover; /* Ensure the image covers the container without distortion */
 }
