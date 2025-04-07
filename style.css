@@ -155,3 +155,6 @@ a img {
     }
 }
 
+.long-scroll {
+    height: 200vh; /* Adjust this value to make it taller or shorter */
+}
