@@ -62,9 +62,16 @@ h2 {
     padding: 20px;
 }
 
-.ul {
-    text-align: center;
+ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    text-align: center; /* Center the contents of the list */
 }
+
+ul li {
+    display: inline; /* Make the list item inline */
+}
+
 .image-container {
     width: 100vw; /* Full viewport width */
     height: auto; /* Allow height to adjust based on content */
