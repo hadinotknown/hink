@@ -177,3 +177,9 @@ a img {
     height: auto; /* Maintain aspect ratio */
     display: block; /* Remove any inline spacing */
 }
+
+iframe {
+            width: 100%; /* Full width */
+            height: 600px; /* Set height as needed */
+            border: none; /* Remove border */
+        }
