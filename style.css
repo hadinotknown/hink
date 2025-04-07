@@ -158,3 +158,22 @@ a img {
 .long-scroll {
     height: 200vh; /* Adjust this value to make it taller or shorter */
 }
+
+.image-row {
+    display: flex; /* Use Flexbox to arrange children in a row */
+    justify-content: center; /* Center the images horizontally */
+    flex-wrap: wrap; /* Allow images to wrap if the screen is too small */
+    margin: 20px 0; /* Add some margin for spacing */
+}
+
+.flex-image-container {
+    flex: 1; /* Allow each image container to grow equally */
+    max-width: 30%; /* Set a maximum width for each image container */
+    margin: 0 10px; /* Add some margin between images */
+}
+
+.flex-image-container img {
+    width: 100%; /* Make the image take the full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any inline spacing */
+}
