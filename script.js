@@ -48,6 +48,7 @@ window.onload = () => {
 
 document.addEventListener('scroll', function() {
     const gifContainer = document.querySelector('.full-screen-gif');
+    const overlay = document.querySelector('.overlay'); // Select the overlay
     const scrollPosition = window.scrollY; // Get the current scroll position
     const windowHeight = window.innerHeight; // Get the height of the viewport
     const documentHeight = document.body.scrollHeight; // Get the total height of the document
@@ -57,4 +58,5 @@ document.addEventListener('scroll', function() {
 
     // Set the opacity of the GIF container
     gifContainer.style.opacity = opacity;
+    overlay.style.opacity = opacity; // Set the overlay opacity
 });
