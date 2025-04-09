@@ -8,7 +8,7 @@
 body {
     font-family: 'AlteHaasGroteskBold';
     margin: 0;
-    background-color: #000000;
+    background-color: #f4f4f4;
 }
 
 .banner {
@@ -34,7 +34,7 @@ body {
 }
 
 h2 {
-    color: #333;
+    color: #000000;
     margin-top: 20px;
 }
 
@@ -47,14 +47,14 @@ h2 {
 .nav-bar a {
     margin: 0 15px;
     text-decoration: none;
-    color: #333;
+    color: #000000;
     font-weight: bold;
     font-size: 1.2rem;
 }
 
 .nav-bar a:hover {
     text-decoration: underline;
-    color: #007BFF;
+    color: #00000;
 }
 
 .container {
