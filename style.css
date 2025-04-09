@@ -67,6 +67,10 @@ p {
 .container {
     text-align: center;
     padding: 20px;
+    position: relative; /* Set position to relative */
+    z-index: 1000; /* Ensure it appears above the GIF */
+    background-color: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
+    border-radius: 10px; /* Optional: Add rounded corners */
 }
 
 ul {
