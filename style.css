@@ -198,3 +198,20 @@ iframe {
             margin-left: -20px; /* Adjust this value to nudge the container to the left */
             border: none; /* Remove border */
 }
+
+.full-screen-gif {
+    position: fixed; /* Fix the position to cover the entire screen */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    z-index: 999; /* Ensure it appears above other content */
+    opacity: 0; /* Start fully transparent */
+    transition: opacity 1s ease; /* Smooth transition for opacity */
+}
+
+.full-screen-gif img {
+    width: 100%; /* Make the GIF take the full width */
+    height: 100%; /* Make the GIF take the full height */
+    object-fit: cover; /* Ensure the GIF covers the container without distortion */
+}
