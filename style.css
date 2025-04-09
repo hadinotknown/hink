@@ -1,11 +1,216 @@
+@font-face {
+    font-family: 'AlteHaasGroteskBold';
+    src: url('AlteHaasGroteskBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    font-family: 'AlteHaasGroteskBold';
+    margin: 0;
+    background-color: #f8f8f8;
+}
+
+.banner {
+    overflow: hidden;
+    white-space: nowrap;
+    background: black;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.marquee {
+    display: inline-block;
+    font-size: 6rem;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    white-space: nowrap; /* Prevent line breaks */
+}
+
+.letter {
+    display: inline-block;
+    opacity: 1; /* Keep letters visible */
+}
+
+h2 {
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+
+p {
+    margin-bottom: 60px;
+    font-size: 1.1rem;
+}
+
+.nav-bar {
+    background-color: #f8f8f8;
+    padding: 10px;
+    text-align: center;
+}
+
+.nav-bar a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.nav-bar a:hover {
+    text-decoration: underline;
+    color: #007BFF;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    position: relative; /* Set position to relative */
+    z-index: 2; /* Ensure it appears above the GIF */
+    background-color: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
+    border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    text-align: center; /* Center the contents of the list */
+}
+
+ul li {
+    display: inline; /* Make the list item inline */
+}
+
+.image-container {
+    width: 100vw; /* Full viewport width */
+    height: auto; /* Allow height to adjust based on content */
+    overflow: auto; /* Prevent overflow */
+}
+
+.image-container img {
+    width: 100%; /* Make the image take the full width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the container without distortion */
+    display: block; /* Remove any inline spacing */
+    margin: 0; /* Remove any margin */
+    padding: 0; /* Remove any padding */
+}
+
+.lnudge-image-container {
+    width: 100vw; /* Full viewport width */
+    height: auto; /* Allow height to adjust based on content */
+    overflow: auto; /* Prevent overflow */
+    margin-left: -20px; /* Adjust this value to nudge the container to the left */
+}
+
+.lnudge-image-container img {
+    width: 100%; /* Make the image take the full width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the container without distortion */
+    display: block; /* Remove any inline spacing */
+    margin: 0; /* Remove any margin */
+    padding: 0; /* Remove any padding */
+}
+
+
+.fade-in {
+    opacity: 0; /* Start fully transparent */
+    animation: fadeIn 0.1s forwards;
+    animation-delay: 0s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* End fully opaque */
+    }
+}
+
+.stretched-image {
+            transform: scaleX(1.5); /* Stretch the image 1.5 times its original width */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+a img {
+    display: inline-block; /* This will apply to images inside links */
+    border: 0px; /* Example style */
+    border-radius: 5px; /* Example style */
+}
+
+#fullScreenImageContainer {
+    display: none; /* Initially hide the image container */
+    position: absolute; /* Change to absolute positioning */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height to cover the entire screen */
+    z-index: 1000; /* Ensure it appears above other content */
+    overflow: auto; /* Allow scrolling if content exceeds the viewport */
+}
+
+#fullScreenImageContainer img {
+    width: 100%; /* Make the image take the full width */
+    height: 100%; /* Make the image take the full height */
+    object-fit: cover; /* Ensure the image covers the container without distortion */
+    display: block; /* Remove any inline spacing */
+}
+
+/* Optional: Add media query for better mobile handling */
+@media (max-width: 768px) {
+    #fullScreenImageContainer img {
+        height: auto; /* Maintain aspect ratio */
+        width: auto; /* Allow width to adjust */
+        max-width: 100%; /* Ensure it doesn't exceed the viewport width */
+        max-height: 100vh; /* Ensure it doesn't exceed the viewport height */
+    }
+}
+
+.long-scroll {
+    height: 200vh; /* Adjust this value to make it taller or shorter */
+}
+
+.image-row {
+    display: flex; /* Use Flexbox to arrange children in a row */
+    justify-content: center; /* Center the images horizontally */
+    flex-wrap: wrap; /* Allow images to wrap if the screen is too small */
+    margin: 20px 0; /* Add some margin for spacing */
+}
+
+.flex-image-container {
+    flex: 1; /* Allow each image container to grow equally */
+    max-width: 30%; /* Set a maximum width for each image container */
+    margin: 0 10px; /* Add some margin between images */
+}
+
+.flex-image-container img {
+    width: 100%; /* Make the image take the full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any inline spacing */
+}
+
+iframe {
+            width: 100vw; /* Full width */
+            height: 48vw; /* Set height as needed */
+            margin-left: -20px; /* Adjust this value to nudge the container to the left */
+            border: none; /* Remove border */
+}
+
+.science-iframe-container {
+            width: 100vw; /* Full width */
+            height: 2000px; /* Set height as needed */
+            margin-left: -20px; /* Adjust this value to nudge the container to the left */
+            border: none; /* Remove border */
+}
+
 .full-screen-gif {
     position: fixed; /* Fix the position to cover the entire screen */
     top: 0;
     left: 0;
     width: 100vw; /* Full viewport width */
     height: 100vh; /* Full viewport height */
-    z-index: 1; /* Lower z-index to be behind content */
-    opacity: 0.8; /* Adjust opacity to make it less dark */
+    z-index: 999; /* Ensure it appears above other content */
+    opacity: 0; /* Start fully transparent */
     transition: opacity 1s ease; /* Smooth transition for opacity */
 }
 
@@ -13,19 +218,6 @@
     width: 100%; /* Make the GIF take the full width */
     height: 100%; /* Make the GIF take the full height */
     object-fit: cover; /* Ensure the GIF covers the container without distortion */
-}
-
-/* Ensure content is above the GIF */
-.container {
-    position: relative; /* Set position to relative */
-    z-index: 2; /* Ensure it appears above the GIF */
-}
-
-/* Optional: Add a background color to the container to enhance visibility */
-.container {
-    background-color: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
-    padding: 20px; /* Add some padding for better spacing */
-    border-radius: 10px; /* Optional: Add rounded corners */
 }
 
 /* Optional: Add a darker overlay to the GIF */
