@@ -45,3 +45,16 @@ window.onload = () => {
     createMarquee();
     animateMarquee();
 };
+
+document.addEventListener('scroll', function() {
+    const gifContainer = document.querySelector('.full-screen-gif');
+    const scrollPosition = window.scrollY; // Get the current scroll position
+    const windowHeight = window.innerHeight; // Get the height of the viewport
+    const documentHeight = document.body.scrollHeight; // Get the total height of the document
+
+    // Calculate the opacity based on scroll position
+    const opacity = Math.min(scrollPosition / (documentHeight - windowHeight), 1); // Limit opacity to 1
+
+    // Set the opacity of the GIF container
+    gifContainer.style.opacity = opacity;
+});
