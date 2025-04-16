@@ -114,7 +114,6 @@ ul li {
     padding: 0; /* Remove any padding */
 }
 
-
 .fade-in {
     opacity: 0; /* Start fully transparent */
     animation: fadeIn 0.1s forwards;
@@ -128,9 +127,9 @@ ul li {
 }
 
 .stretched-image {
-            transform: scaleX(1.5); /* Stretch the image 1.5 times its original width */
-            height: auto; /* Maintain aspect ratio */
-        }
+    transform: scaleX(1.5); /* Stretch the image 1.5 times its original width */
+    height: auto; /* Maintain aspect ratio */
+}
 
 a img {
     display: inline-block; /* This will apply to images inside links */
@@ -190,17 +189,17 @@ a img {
 }
 
 iframe {
-            width: 100vw; /* Full width */
-            height: 48vw; /* Set height as needed */
-            margin-left: -20px; /* Adjust this value to nudge the container to the left */
-            border: none; /* Remove border */
+    width: 100vw; /* Full width */
+    height: 48vw; /* Set height as needed */
+    margin-left: -20px; /* Adjust this value to nudge the container to the left */
+    border: none; /* Remove border */
 }
 
 .science-iframe-container {
-            width: 100vw; /* Full width */
-            height: 2000px; /* Set height as needed */
-            margin-left: -20px; /* Adjust this value to nudge the container to the left */
-            border: none; /* Remove border */
+    width: 100vw; /* Full width */
+    height: 2000px; /* Set height as needed */
+    margin-left: -20px; /* Adjust this value to nudge the container to the left */
+    border: none; /* Remove border */
 }
 
 .full-screen-gif {
@@ -209,7 +208,7 @@ iframe {
     left: 0;
     width: 100vw; /* Full viewport width */
     height: 100vh; /* Full viewport height */
-    z-index: 2; /* Ensure it appears above the overlay */
+    z-index: 1; /* Ensure it appears below the container */
     opacity: 0; /* Start fully transparent */
     transition: opacity 1s ease; /* Smooth transition for opacity */
 }
@@ -227,7 +226,7 @@ iframe {
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
-    z-index: 1; /* Lower z-index than the main content */
+    z-index: 2; /* Ensure it appears above the GIF but below the container */
     opacity: 0; /* Start hidden */
     transition: opacity 1s ease; /* Smooth transition for opacity */
 }
