@@ -241,4 +241,5 @@ iframe {
     z-index: 2; /* Ensure it appears above the GIF but below the container */
     opacity: 0; /* Start hidden */
     transition: opacity 1s ease; /* Smooth transition for opacity */
+    pointer-events: none;
 }
