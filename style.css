@@ -211,12 +211,14 @@ iframe {
     z-index: 1; /* Ensure it appears below the container */
     opacity: 0; /* Start fully transparent */
     transition: opacity 1s ease; /* Smooth transition for opacity */
+    pointer-events: none;
 }
 
 .full-screen-gif img {
     width: 100%; /* Make the GIF take the full width */
     height: 100%; /* Make the GIF take the full height */
     object-fit: cover; /* Ensure the GIF covers the container without distortion */
+    pointer-events: none;
 }
 
 .overlay {
