@@ -87,6 +87,7 @@ ul li {
     width: 100vw; /* Full viewport width */
     height: auto; /* Allow height to adjust based on content */
     overflow: auto; /* Prevent overflow */
+    z-index: 2;
 }
 
 .image-container img {
@@ -96,6 +97,7 @@ ul li {
     display: block; /* Remove any inline spacing */
     margin: 0; /* Remove any margin */
     padding: 0; /* Remove any padding */
+    z-index: 2;
 }
 
 .lnudge-image-container {
@@ -103,6 +105,7 @@ ul li {
     height: auto; /* Allow height to adjust based on content */
     overflow: auto; /* Prevent overflow */
     margin-left: -20px; /* Adjust this value to nudge the container to the left */
+    z-index: 2;
 }
 
 .lnudge-image-container img {
@@ -112,6 +115,7 @@ ul li {
     display: block; /* Remove any inline spacing */
     margin: 0; /* Remove any margin */
     padding: 0; /* Remove any padding */
+    z-index: 2;
 }
 
 .fade-in {
@@ -174,18 +178,21 @@ a img {
     justify-content: center; /* Center the images horizontally */
     flex-wrap: wrap; /* Allow images to wrap if the screen is too small */
     margin: 20px 0; /* Add some margin for spacing */
+    z-index: 2;
 }
 
 .flex-image-container {
     flex: 1; /* Allow each image container to grow equally */
     max-width: 30%; /* Set a maximum width for each image container */
     margin: 0 10px; /* Add some margin between images */
+    z-index: 2;
 }
 
 .flex-image-container img {
     width: 100%; /* Make the image take the full width of its container */
     height: auto; /* Maintain aspect ratio */
     display: block; /* Remove any inline spacing */
+    z-index: 2;
 }
 
 iframe {
@@ -193,6 +200,7 @@ iframe {
     height: 48vw; /* Set height as needed */
     margin-left: -20px; /* Adjust this value to nudge the container to the left */
     border: none; /* Remove border */
+    z-index: 2;
 }
 
 .science-iframe-container {
@@ -200,6 +208,7 @@ iframe {
     height: 2000px; /* Set height as needed */
     margin-left: -20px; /* Adjust this value to nudge the container to the left */
     border: none; /* Remove border */
+    z-index: 2;
 }
 
 .full-screen-gif {
@@ -217,6 +226,7 @@ iframe {
 .full-screen-gif img {
     width: 100%; /* Make the GIF take the full width */
     height: 100%; /* Make the GIF take the full height */
+    z-index: 1;
     object-fit: cover; /* Ensure the GIF covers the container without distortion */
     pointer-events: none;
 }
