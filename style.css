@@ -68,7 +68,7 @@ p {
     text-align: center;
     padding: 20px;
     position: relative; /* Set position to relative */
-    z-index: 2; /* Ensure it appears above the GIF */
+    z-index: 10; /* Ensure it appears above the GIF */
     background-color: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
     border-radius: 10px; /* Optional: Add rounded corners */
 }
@@ -209,7 +209,7 @@ iframe {
     left: 0;
     width: 100vw; /* Full viewport width */
     height: 100vh; /* Full viewport height */
-    z-index: 999; /* Ensure it appears above other content */
+    z-index: 2; /* Ensure it appears above the overlay */
     opacity: 0; /* Start fully transparent */
     transition: opacity 1s ease; /* Smooth transition for opacity */
 }
@@ -220,7 +220,6 @@ iframe {
     object-fit: cover; /* Ensure the GIF covers the container without distortion */
 }
 
-/* Optional: Add a darker overlay to the GIF */
 .overlay {
     position: fixed;
     top: 0;
@@ -228,7 +227,7 @@ iframe {
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
-    z-index: 1; /* Same z-index as the GIF */
+    z-index: 1; /* Lower z-index than the main content */
     opacity: 0; /* Start hidden */
     transition: opacity 1s ease; /* Smooth transition for opacity */
 }
